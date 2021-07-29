@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@stencil/core": "2.6.0",
+    "@vaadin/vaadin": "^20.0.5",
     "@vaadin/vaadin-core": "^20.0.5",
     "@vaadin/vaadin-grid-pro": "^20.0.1"
   },
