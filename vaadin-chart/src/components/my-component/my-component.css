@@ -1,7 +1,7 @@
-vaadin-rich-text-editor::part(toolbar) {
+/* vaadin-rich-text-editor::part(toolbar) {
     box-shadow: inset 0 0 15px rgb(73, 0, 0);
     background-color: red;
-}
+} */
 
 vaadin-rich-text-editor::part(toolbar-button) {
   display: none;

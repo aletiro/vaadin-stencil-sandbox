@@ -8,8 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyComponent {
     }
-    interface PrimeUiTest {
-    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -18,25 +16,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
-    interface HTMLPrimeUiTestElement extends Components.PrimeUiTest, HTMLStencilElement {
-    }
-    var HTMLPrimeUiTestElement: {
-        prototype: HTMLPrimeUiTestElement;
-        new (): HTMLPrimeUiTestElement;
-    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
-        "prime-ui-test": HTMLPrimeUiTestElement;
     }
 }
 declare namespace LocalJSX {
     interface MyComponent {
     }
-    interface PrimeUiTest {
-    }
     interface IntrinsicElements {
         "my-component": MyComponent;
-        "prime-ui-test": PrimeUiTest;
     }
 }
 export { LocalJSX as JSX };
@@ -44,7 +32,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "prime-ui-test": LocalJSX.PrimeUiTest & JSXBase.HTMLAttributes<HTMLPrimeUiTestElement>;
         }
     }
 }

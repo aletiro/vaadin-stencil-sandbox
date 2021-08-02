@@ -1,6 +1,6 @@
 import { Component, h } from '@stencil/core';
-import { AnyHTMLElement } from '@stencil/core/internal';
 import '@vaadin/vaadin-grid-pro';
+import { GridElement } from '@vaadin/vaadin-grid'
 import '@vaadin/vaadin-grid-pro/vaadin-grid-pro-edit-column';
 import '@vaadin/vaadin-grid/vaadin-grid-sort-column';
 import '@vaadin/vaadin-grid/vaadin-grid-filter-column';
@@ -14,7 +14,7 @@ import data from '../../data/people.json';
   shadow: true,
 })
 export class MyComponent {
-  private vaadinGrid: AnyHTMLElement;
+  private vaadinGrid: GridElement;
 
   componentDidRender() {
     this.vaadinGrid.items = data;
